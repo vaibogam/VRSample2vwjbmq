@@ -33,7 +33,30 @@
                     gps-entity-place="latitude: 11.66237732; longitude: 78.18805088;"
                 ></a-image>
             
+            <a-assets>
+                <audio id="sound" src="audio.mp3" preload="auto"></audio>
+            </a-assets>
+            <a-marker preset="hiro">
+                    <a-box position='0 0.5 0' material='color: black;' soundhandler> 
+                    </a-box>
+            </a-marker>
+            <a-entity sound="src: #sound" autoplay="false"></a-entity>
+            <a-entity camera></a-entity>
+            
             <a-camera gps-camera rotation-reader></a-camera>
         </a-scene>
     </body>
+    <script>
+    AFRAME.registerComponent('soundhandler', {
+        tick: function () {
+               var entity = document.querySelector('[sound]');
+             if (document.querySelector('a-marker').object3D.visible == true) {
+                entity.components.sound.playSound();
+            } else {
+                entity.components.sound.pauseSound();
+            }
+
+         }
+    });
+    </script>
 </html>
