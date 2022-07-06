@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    </head>
+
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene
+            embedded
+            loading-screen="enabled: false;"
+            arjs="sourceType: webcam; debugUIEnabled: false;"
+        >
+                <a-image
+                    src="assets/rose.gif"
+                    look-at="[gps-camera]"
+                    scale="2 2 2"
+                    gps-entity-place="latitude: 11.66300; longitude: 78.18815;"
+                ></a-image>
+                <a-image
+                    src="assets/tomato.gif"
+                    look-at="[gps-camera]"
+                    scale="2 2 2"
+                    gps-entity-place="latitude: 11.66320; longitude: 78.18816;"
+                ></a-image>
+                <a-image
+                    src="assets/tablerose.jpg"
+                    look-at="[gps-camera]"
+                    scale="2 2 2"
+                    gps-entity-place="latitude: 11.66340; longitude: 78.18817;"
+                ></a-image>
+                <a-image
+                    src="assets/tablerose.jpg"
+                    look-at="[gps-camera]"
+                    scale="2 2 2"
+                    gps-entity-place="latitude: 11.66360; longitude: 78.18818;"
+                ></a-image>
+            
+                      
+          
+           <a-image
+                    src="assets/rose.gif"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 11.66227833; longitude: 78.18814654;"
+                ></a-image>
+                <a-image
+                    src="assets/tomato.gif"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 11.66247803; longitude: 78.18804821;"
+                ></a-image>
+                <a-image
+                    src="assets/tablerose.jpg"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 11.66231250; longitude: 78.1882969;"
+                ></a-image>
+          
+          
+            <a-camera gps-camera rotation-reader></a-camera>
+        </a-scene>
+    </body>
+</html>
