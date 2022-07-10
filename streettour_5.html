@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    </head>
+
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene
+            embedded
+            loading-screen="enabled: false;"
+            arjs="sourceType: webcam; debugUIEnabled: false;"
+        >
+                <a-image
+                    src="assets/pipe.gif"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 11.662372752157356; longitude: 78.18813123364345;"
+                ></a-image>
+                <a-image
+                    src="assets/dress.gif"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 11.662444182043076; longitude: 78.18810164062658;"
+                ></a-image>
+                <a-image
+                    src="assets/school-bus-gif.gif"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 11.66197869145924; longitude: 78.18792519564784;"
+                ></a-image>
+                <a-image
+                    src="assets/park-500x500.gif"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 11.661705057099937; longitude: 78.18792909428117;"
+                ></a-image>
+            <a-camera gps-camera rotation-reader></a-camera>
+        </a-scene>
+    </body>
+</html>
